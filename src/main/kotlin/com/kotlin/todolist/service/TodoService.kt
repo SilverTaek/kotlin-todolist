@@ -18,4 +18,6 @@ class TodoService(
         todo.completed = !todo.completed
         return todoRepository.save(todo)
     }
+
+    fun deleteTodo(todoId: Long) = todoRepository.deleteById(todoId)
 }
