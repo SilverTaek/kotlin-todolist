@@ -15,4 +15,7 @@ class TodoController (
     @PostMapping
     fun insertTodo(@RequestBody todoRequest: TodoRequest) = todoService.insertTodo(todoRequest.todoName)
 
+    @PutMapping(path = ["/{todoId}"])
+    fun updateTodo(@PathVariable("todoId") todoId: Long) = todoService.updateTodo(todoId)
+
 }
